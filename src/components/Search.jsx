@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+import { useState } from "react";
+
 export const Search = ({ placeholder, onSearch }) => {
   const [search, setSearch] = useState("");
 

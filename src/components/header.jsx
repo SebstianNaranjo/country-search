@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const Header = ({ title, description }) => {
   return (
     <div className="content-center">
