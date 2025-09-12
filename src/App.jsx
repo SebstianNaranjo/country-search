@@ -8,10 +8,21 @@ import './App.css'
 function App() {
   const [countries, setCountries] = useState([]);
 
+  const handleSearch = async (search) => {
+    if (!search.trim()) return;
+    try {
+      const result = await getCountriesByName(search);
+      setCountries(result);
+    } catch {
+      setCountries([]);
+    }
+  };
+
   return (
     <>
       <Header title="Buscador de Países" description="Encuentra información sobre países." />
-      <Search placeholder="Buscar país..." onSearch={(search) => console.log(search)} />
+      <Search placeholder="Buscar país..." onSearch={handleSearch} />
+      <CountriesList countries={countries} />
     </>
   )
 }
