@@ -1,7 +1,7 @@
 import { Header } from './components/header'
 import { Search } from './components/search'
-// import { CountriesList } from './components/countriesList'
-// import { getCountriesByName } from './services/countries'
+import { CountriesList } from './countries/CountriesList'
+import { getCountriesByName } from './actions/getCountriesByName'
 import { useState } from 'react'
 import './App.css'
 
