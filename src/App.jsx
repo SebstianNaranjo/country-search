@@ -1,5 +1,5 @@
-
-
+import { Header } from './components/header'
+import { Search } from './components/search'
 import { useState } from 'react'
 import './App.css'
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      
+      <Header title="Buscador de Países" description="Encuentra información sobre países." />
     </>
   )
 }
